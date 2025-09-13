@@ -7,7 +7,7 @@ cd "$ROOT_DIR"
 
 echo ">>> Creating kind cluster (if not exists)..."
 if ! kind get clusters | grep -q "^todo-cluster$"; then
-  kind create cluster --config cluster.yml
+  kind create cluster --config ./.infrastructure/cluster.yml
 else
   echo "kind cluster 'todo-cluster' already exists"
 fi
